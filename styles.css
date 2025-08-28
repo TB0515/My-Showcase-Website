@@ -26,6 +26,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    cursor: default;
 }
 
 body{
@@ -102,6 +103,7 @@ a {
     text-decoration: none;
     color:var(--darkTwo);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 
@@ -165,12 +167,11 @@ a {
 }
 
 
-.showcase-area1 .container{
+#home .container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-content: center;
     place-items: center;
-    gap: 50px;
 }
 
 .home-left{
@@ -192,7 +193,7 @@ a {
 .content{
     color: var(--lightOne);
     margin: 2rem 0;
-    max-width: 500px;
+    max-width: 430px;
     line-height: 1.5;
     text-align: left;
     justify-content: center;
@@ -223,80 +224,163 @@ a {
     align-items: center;
     justify-content: center;
     padding: 1rem 1.5rem;
+    margin: 1rem 1rem;
 }
 
 .icon {
     cursor: pointer;
     height: 2rem;
-    margin: 0 3px;
+    margin: 0 4px;
 }
 
 .home-right .loved-things{
-    width:100%;
+    max-width:100%;
 }
 
 
-.showcase-area2 .container{
+#my-learning .container{
     display: grid;
-    position: relative;
-    grid-template-areas: 'myArea myArea myArea myArea';
-    grid-template-columns: repeat(4, 1fr);
+    position:relative;
     box-sizing: border-box;
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit,1fr);
+    grid-gap: 20px;
     width: 100%;
+    min-height: fit-content;
 }
 
-.box1{
-    grid-area: myArea;
+.box1 {
+    grid-column-end: span 4;
     place-content: center;
     place-items: center;
 }
 
 .box1 .content{
-    max-width: 95% !important;
+    max-width: 95%;
 }
 
 .box {
     display: grid;
-    justify-content: space-between;
+    grid-template-columns: subgrid;
+}
+
+.box .item1{
+    align-self: flex-start;
 }
 
 .box .resume{
-    align-self: end;
+    align-self: flex-end;
 }
 
-.showcase-area3 .container{
-    display: grid;
+#my-learning .arrow {
+    display: block;
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    color: var(--darkTwo);
+}
+
+#project-section .container{
+    display: flex;
     position: relative;
-    grid-template-columns: repeat(2, 1fr);
-    box-sizing: border-box;
-    gap: 10%;
-}
-
-.projects{
-    place-content: center;
-    place-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:20px;
 }
 
 .projects a{
-    background-color: transparent;
-    display: grid;
-    place-content: center;
-    place-items: center;
+    width: 450px;
 }
 
-.games-cover {
-    display:grid;
-    width: 80%;
-    height: 100%;
+.projects a .btn{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
+#project-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+#project-section .arrow {
+    display: block;
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    color: var(--darkTwo)
+}
+
+.sub-heading{
+    text-align: center;
+    cursor: pointer;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+#contact .container{
+    width: 30vw;
+}
+
+.contact-info{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    background: var(--mainColor);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-detail{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-detail .mail {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.contact-info-detail p{
+    font-size: larger;
+}
+
+.contact-info-detail .icon{
+    cursor: default;
+}
 
 footer .container{
-    margin-bottom: 0px !important;
+    position:relative;
+    margin-top: 2rem;
     display: flex;
+    justify-content: space-between;
 }
 
+footer .arrow {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 2rem;
+    color: var(--darkTwo)
+}
+
+footer .content{
+    min-width: 100%;
+    text-align: center;
+}
 
 .toggle-button{
     display: inline-block;
@@ -310,6 +394,7 @@ footer .container{
     border-radius: 50%;
     place-content: center;
     place-items: center;
+    margin-left: 10px;
 }
 
 .whole-page.light .toggle-button i:last-child{
@@ -351,11 +436,58 @@ footer .container{
     }
 }
 
+@media only screen and (max-width: 1300px) {
+    .box1 {
+        grid-column: span 2;
+    }
+
+    .box {
+        place-content: center;
+        place-items: center;
+    }
+
+    .item1 .content{
+        max-width: fit-content;
+        margin: 0 20px;
+    }
+
+    #my-learning .arrow{
+        display: none;
+    }
+
+    #project-section .arrow{
+        display: none;
+    }
+
+    #contact .container{
+    width: fit-content;
+    }
+
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+    
+
 @media only screen and (max-width: 870px) {
-    .showcase-area1 .container {
+    #home .container {
         grid-template-columns: 1fr;
     }
 
+    .home-right {
+        margin-top: 20px;
+    }
+
+    .box1 {
+        grid-column: span 1;
+    }
+
+    .projects a{
+    width: 90vw;
+    }
 
     header .container{
         justify-content: right;
@@ -410,6 +542,13 @@ footer .container{
         pointer-events: all;
         opacity: 1;
     }
+
+    #project-section img {
+        width: 180px !important;
+        height: 250px !important;
+        object-fit: fill;
+    }
+    
 }
 
 

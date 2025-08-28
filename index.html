@@ -13,10 +13,10 @@
                 <div class="container">
                     <div class="links">
                         <ul>
-                            <li><a href="#Home">Home</a></li>
-                            <li><a href="#My-Learning">My Learnings</a></li>
-                            <li><a href="#">Project</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#my-learning">My Learnings</a></li>
+                            <li><a href="#projects">Project</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="overlay"></div>
@@ -26,7 +26,7 @@
                 </div>
             </header>
 
-            <section class="showcase-area1">
+            <section id="home">
                 <div class="container">
                     <div class="home-left">
                         <div class="main-title">
@@ -50,7 +50,7 @@
                 </div>
             </section>
 
-            <section class="showcase-area2">
+            <section id="my-learning">
                 <div class="container">
                     <div class="box1">
                         <div class="main-title">
@@ -59,7 +59,7 @@
                         <p class="content">
                             Building this website from the ground up offered a rich, hands-on experience with all the building blocks of the modern web. 
                             Each section and feature, from layout to animations, is coded purely in HTML, CSS, and vanilla JavaScript, bringing together everything I’ve learned so far.
-                            In Addition, I am self-learning Python on Udemy. has played a supporting role in scripting, data processing, and automation in my learning projects.
+                            In Addition, I am self-learning Python on Udemy.
                         </p>
                     </div>
                     
@@ -115,34 +115,54 @@
                         </div>
                     </div>
                 </div>
-                <img src="" alt="arrow icon">
+                <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#project-section'"></i>
             </section>
             
-            <section class="showcase-area3">
+            <section id="project-section">
                 <div class="container">
                     <div class="projects">
-                        <a href="#" class="btn"> 
-                        <img src="./img/turtle.png" alt="illustration of green turtle" class="games-cover">
+                        <a href="#" class="btn">
+                        <img src="./img/turtle.png" alt="illustration of green turtle">
                         <h3 class="sub-heading">Turle Crossing Game</h3>
                         </a>
                     </div>
                     <div class="projects">
-                        <a href="#" class="btn"> 
-                        <img src="./img/pingpong.png" alt="Red and Blue Pingpong bat and white ball" class="games-cover">
+                        <a href="#" class="btn">
+                        <img src="./img/pingpong.png" alt="Red and Blue Pingpong bat and white ball" class="pingpong">
                         <h3 class="sub-heading">Pingpong Game</h3>
                         </a>
                     </div>
                     <div class="projects">
-                        <a href="#" class="btn"> 
-                        <img src="./img/maze.png" alt="Maze" class="games-cover">
-                        <h3 class="sub-heading">Maze Solver Game</h3>
-                        </a>
+                        <a href="#" class="btn">
+                        <img src="./img/maze.png" alt="Maze" class="Maze">
+                        <h3 class="sub-heading">Maze Solver Game</h3> 
+                        </a>  
                     </div>
                     <div class="projects">
-                        <a href="#" class="btn"> 
-                        <img src="./img/cube.png" alt="dice" class="games-cover">
+                        <a href="#" class="btn">
+                        <img src="./img/cube.png" alt="dice">
                         <h3 class="sub-heading">Can't Stop Inspired Game</h3>
                         </a>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#contact'"></i>
+            </section>
+
+            <section id="contact">
+                <p class="content">Get in Touch</p>
+                <div class="main-title">
+                    <h1>Contact Me</h1>
+                </div>
+                <div class="container">
+                    <div class="contact-info">
+                        <div class="contact-info-detail">
+                            <i class="fa-solid fa-envelope mail icon"></i>
+                            <p><a href="mailto:someone@example.com">thrishbg15@gmail.com</a></p> 
+                        </div>
+                        <div class="contact-info-detail">
+                            <img src="./img/linked-in-img.png" alt="Linkedin icon" class="icon">
+                            <p><a href='https://www.linkedin.com/in/thrishala-baskaran/'>LinkedIn</a></p> 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -153,8 +173,9 @@
                         <i class="fa-solid fa-moon"></i>
                         <i class="fa-regular fa-sun"></i>
                     </button>
+                    <i class="fa-solid fa-angles-up arrow" onclick="location.href='./#home'"></i>
                 </div>
-                
+                <p class="content">Copyright &#169; 2025 TB. All Rights Reserved.</p>
             </footer>
         </div>
     </main>
