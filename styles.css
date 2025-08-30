@@ -115,7 +115,9 @@ a {
 }
 
 .hamburger-menu{
-    position:relative;
+    position:fixed;
+    top:0;
+    right:0;
     z-index: 99;
     width: 2rem;
     height: 2rem;
@@ -237,6 +239,48 @@ a {
     max-width:100%;
 }
 
+#about .container{
+    display: flex;
+    position:relative;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--darkOne);
+}
+
+.my-pic {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.brief{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--darkOne);
+    padding: 3rem;
+    border-radius: 9rem 5rem 12rem 7rem;
+    rotate: 3deg;
+}
+
+.brief p{   
+    rotate: -3deg;
+}
+
+#about .arrow {
+    display: block;
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    color: var(--darkTwo);
+    cursor: pointer;
+}
 
 #my-learning .container{
     display: grid;
@@ -280,30 +324,51 @@ a {
     color: var(--darkTwo);
 }
 
+
 #project-section .container{
     display: flex;
     position: relative;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     gap:20px;
 }
 
-.projects a{
-    width: 450px;
+#project-section .details-container{
+    display: flex;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 2px solid var(--darkOne);
+    border-radius: 2rem;
 }
 
-.projects a .btn{
+.article {
     display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    color: var(--darkTwo);
+}
+
+#project-section .resume {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
 }
 
 #project-section img {
-  width: 300px;
-  height: 300px;
-  object-fit: fill;
-  cursor: pointer;
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.resume button{
+    text-decoration: none;
+    color:var(--darkTwo);
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 #project-section .arrow {
@@ -451,6 +516,9 @@ footer .content{
         margin: 0 20px;
     }
 
+    #about .arrow{
+        display: none;
+    }
     #my-learning .arrow{
         display: none;
     }
@@ -481,12 +549,28 @@ footer .content{
         margin-top: 20px;
     }
 
-    .box1 {
-        grid-column: span 1;
+    #about .container{
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .projects a{
-    width: 90vw;
+    .my-pic {
+    max-width: 300px;
+    max-height: 300px;
+    }
+
+    .brief {
+        padding: 0rem;
+        border: none;
+        rotate: 0deg;
+    }
+
+    .brief p{   
+    rotate: -0deg;
+    }
+
+    .box1 {
+        grid-column: span 1;
     }
 
     header .container{

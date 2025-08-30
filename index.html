@@ -10,20 +10,22 @@
     <main>
         <div class="whole-page light">
             <header>
-                <div class="container">
-                    <div class="links">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#my-learning">My Learnings</a></li>
-                            <li><a href="#projects">Project</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+                <nav id="navbar">
+                    <div class="container">
+                        <div class="links">
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#my-learning">My Learnings</a></li>
+                                <li><a href="#project-section">Project</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="hamburger-menu">
+                            <div class="bar"></div>
+                        </div>
                     </div>
-                    <div class="overlay"></div>
-                    <div class="hamburger-menu">
-                        <div class="bar"></div>
-                    </div>
-                </div>
+                </nav>
             </header>
 
             <section id="home">
@@ -36,7 +38,7 @@
                         <p class="content">Welcome to my portfolio of learnings and projects.  </p>
                         
                         <div class="resume">
-                            <a class="btn" onclick="window.open('./img/TB_Resume.docx.pdf')"> Download CV </a>
+                            <button class="btn" onclick="window.open('./img/TB_Resume.docx.pdf')"> Download CV </button>
                         </div>
 
                         <div id="socials">
@@ -50,16 +52,38 @@
                 </div>
             </section>
 
+            <section id="about">
+                <h1 class="about-title">About Me</h1>
+                <div class="container">
+                    
+                    <div class="profile-pic">
+                        <img src="./img/profile-pic.png" alt="profile-pic" class="my-pic">
+                    </div>
+                    <div class="brief">
+                        <p class="content">While working in Human Resources, I was drawn to coding as a way to solve the pain points of repetitive tasks. 
+                            This curiosity sparked a desire to learn and create efficient solutions with technology. 
+                            After taking a career break, I’ve embraced each day as an opportunity to build new skills from scratch. 
+                            When my husband’s colleague shared her inspiring journey with Founders and Coders, I knew this hands-on, collaborative bootcamp was the perfect place to grow. 
+                            I’m excited to join a passionate community where I can learn, connect, and confidently launch my new career as a developer.</p>
+                    </div>
+                    
+                </div>
+                <article>
+                <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#my-learning'"></i>
+                </article>
+            </section>
+
             <section id="my-learning">
                 <div class="container">
                     <div class="box1">
                         <div class="main-title">
-                            <h1>My Learnings</h1>
+                            <h1>My Learning Journey so Far</h1>
                         </div>
                         <p class="content">
-                            Building this website from the ground up offered a rich, hands-on experience with all the building blocks of the modern web. 
-                            Each section and feature, from layout to animations, is coded purely in HTML, CSS, and vanilla JavaScript, bringing together everything I’ve learned so far.
-                            In Addition, I am self-learning Python on Udemy.
+                            Building this website from the ground up offered a rich, hands-on experience with the fundamental building blocks of the modern web. 
+                            Each section and feature, from layout to animations, was coded purely in HTML, CSS, and vanilla JavaScript, bringing together everything I’ve learned so far. 
+                            Recently, I began self-learning Power BI through DataCamp and Python via Udemy. This is my first time undertaking a full web and game development project using HTML, CSS, and JavaScript. 
+                            Learning the basics of HTML, CSS, and JavaScript on freeCodeCamp, as advised before starting the projects, was very helpful.
                         </p>
                     </div>
                     
@@ -67,12 +91,12 @@
                         <div class="item1">
                             <p class="content">
                                 Discovering HTML opened the door to a new world of creativity for me. 
-                                Building my first web page felt like magic—suddenly, I could turn simple text files into living, breathing experiences online! 
+                                Building my first web page felt like magic—suddenly, I could turn simple text files into living, breathing experiences online! Linked below my first webpage. 
                                 With every heading, link, and form I crafted, I realized how powerful good structure and accessible design can be, allowing ideas to reach and impact anyone, anywhere.
                             </p>
                         </div>
                         <div class="resume">
-                            <a href="#" class="btn">HTML</a>
+                            <a href="https://tb0515.github.io/Recipe-Page-Basic-HTML/" class="btn">HTML</a>
                         </div>
                     </div>
                     
@@ -81,11 +105,11 @@
                             <p class="content">
                                 With CSS, I learned to add soul and personality to my websites. 
                                 From bold color palettes and smooth animations to refined layouts that adapt to every device, CSS made it possible for me to design experiences that don’t just work—they spark curiosity and delight. 
-                                It’s more than decoration; it’s how a site feels and welcomes every visitor in their own way.
+                                It’s more than decoration; it’s how a site feels and welcomes every visitor in their own way. Linked below is an event flyer I created while learning CSS Flexbox and Responsive design.
                             </p>
                         </div>
                         <div class="resume">
-                            <a href="#" class="btn">CSS</a>
+                            <a href="https://tb0515.github.io/Event-Flyer/" class="btn">CSS</a>
                         </div>
                     </div>
                     
@@ -98,61 +122,70 @@
                             </p>
                         </div>
                         <div class="resume">
-                            <a href="#" class="btn">JavaScript</a>
+                            <a href="https://www.codewars.com/users/TB0515" class="btn">JavaScript</a>
                         </div>
                     </div>
                     
                     <div class="box">
                         <div class="item1">
                             <p class="content">
-                                Teaching myself Python through Udemy has opened up new possibilities and ways of thinking beyond just the browser. 
+                                Teaching myself Python through Udemy reenforced by passion for development. 
                                 Its clear and straightforward syntax made learning programming enjoyable and approachable, even without any prior experience. 
                                 From automating simple tasks to exploring basic web tools, Python has shown me how coding can tackle real-world challenges and motivated me to keep discovering what’s possible behind the scenes.
+                                I am currently in the phase of learning about Flask framework. I have linked a github repo with my source code for pingpong game, still in the process of learning how to host it on web or make an app.
                             </p>
                         </div>
                         <div class="resume">
-                            <a href="#" class="btn">Python</a>
+                            <a href="https://github.com/TB0515/Pingpong-Game" class="btn">Python</a>
                         </div>
                     </div>
                 </div>
+                <article>
                 <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#project-section'"></i>
+                </article>
             </section>
             
             <section id="project-section">
+                <h1 class="about-title">My Projects</h1>
                 <div class="container">
-                    <div class="projects">
-                        <a href="#" class="btn">
-                        <img src="./img/turtle.png" alt="illustration of green turtle">
-                        <h3 class="sub-heading">Turle Crossing Game</h3>
-                        </a>
+                    <div class="details-container">
+                        <div class="article">
+                            <img src="./img/turtle.png" alt="green-turle game cover" class='project-img'>
+                            <h2 class="sub-heading">Turtle Crossing Game</h2>
+                            <div class="resume">
+                                <button class="btn" onclick="location.href ='https://github.com/TB0515/Turtle-Crossing-Game'">GitHub</button>
+                                <button class="btn" onclick="location.href ='https://tb0515.github.io/Turtle-Crossing-Game/'">Live Demo</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="projects">
-                        <a href="#" class="btn">
-                        <img src="./img/pingpong.png" alt="Red and Blue Pingpong bat and white ball" class="pingpong">
-                        <h3 class="sub-heading">Pingpong Game</h3>
-                        </a>
+                    <div class="details-container">
+                        <div class="article">
+                            <img src="./img/cube.png" alt="dice" class='project-img'>
+                            <h2 class="sub-heading">Black Jack</h2>
+                            <div class="resume">
+                                <button class="btn" onclick="location.href ='#'">GitHub</button>
+                                <button class="btn" onclick="location.href ='#'">Live Demo</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="projects">
-                        <a href="#" class="btn">
-                        <img src="./img/maze.png" alt="Maze" class="Maze">
-                        <h3 class="sub-heading">Maze Solver Game</h3> 
-                        </a>  
-                    </div>
-                    <div class="projects">
-                        <a href="#" class="btn">
-                        <img src="./img/cube.png" alt="dice">
-                        <h3 class="sub-heading">Can't Stop Inspired Game</h3>
-                        </a>
+                    <div class="details-container">
+                        <div class="article">
+                            <img src="./img/pingpong.png" alt="scrambled numbers" class='project-img'>
+                            <h2 class="sub-heading">Guess the number</h2>
+                            <div class="resume">
+                                <button class="btn" onclick="location.href ='#'">GitHub</button>
+                                <button class="btn" onclick="location.href ='#'">Live Demo</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <article>
                 <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#contact'"></i>
+                </article>
             </section>
 
             <section id="contact">
-                <p class="content">Get in Touch</p>
-                <div class="main-title">
-                    <h1>Contact Me</h1>
-                </div>
+                <h1 class="about-title">Contact Me</h1>
                 <div class="container">
                     <div class="contact-info">
                         <div class="contact-info-detail">
@@ -173,7 +206,9 @@
                         <i class="fa-solid fa-moon"></i>
                         <i class="fa-regular fa-sun"></i>
                     </button>
-                    <i class="fa-solid fa-angles-up arrow" onclick="location.href='./#home'"></i>
+                    <article>
+                    <i class="fa-solid fa-angles-up arrow" onclick="location.href='./#navbar'"></i>
+                    </article>
                 </div>
                 <p class="content">Copyright &#169; 2025 TB. All Rights Reserved.</p>
             </footer>
