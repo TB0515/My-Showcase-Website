@@ -632,10 +632,10 @@ footer .content{
         justify-content: center;
     }
 
-    /* .my-pic {
+    .my-pic {
         max-width: 300px;
         max-height: 300px;
-    } */
+    }
 
     .brief {
         border: none;
