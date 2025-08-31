@@ -279,6 +279,9 @@ a {
     right: 0;
     font-size: 2rem;
     color: var(--darkTwo);
+}
+
+article {
     cursor: pointer;
 }
 
@@ -362,6 +365,7 @@ a {
     width: 300px;
     height: 300px;
     object-fit: fill;
+    border-radius: 1rem;
 }
 
 .resume button{
@@ -401,24 +405,19 @@ a {
     border-radius: 2rem;
     background: var(--mainColor);
     margin: 2rem auto;
-    padding: 0.5rem;
 }
 
 .contact-info-detail{
     display:flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     margin: 1rem;
 }
 
 .contact-info-detail .mail {
     font-size: 1.2rem;
     margin-top: 10px;
-}
-
-.contact-info-detail p{
-    font-size: larger;
+    color: #0172b1;
 }
 
 .contact-info-detail .icon{
@@ -560,7 +559,6 @@ footer .content{
     }
 
     .brief {
-        padding: 0rem;
         border: none;
         rotate: 0deg;
     }
@@ -631,6 +629,7 @@ footer .content{
         width: 180px !important;
         height: 250px !important;
         object-fit: fill;
+        border-radius: 1rem;
     }
     
 }
