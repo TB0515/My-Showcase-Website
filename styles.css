@@ -81,6 +81,8 @@ section{
     padding-top: 4vh;
     height: auto;
     min-height: 96vh;
+    place-content: center;
+    place-items: center;
 }
 
 
@@ -500,6 +502,7 @@ a {
     -webkit-justify-content: center;
     justify-content: center;
     flex-direction: column;
+    min-height: 70vh;
     padding: 5rem 0;
     margin: 5rem 0;
 }
