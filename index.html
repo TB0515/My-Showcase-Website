@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="styles.css">
-    <title>Showcase Website</title>
+    <meta name="description" content="Thrishala Baskaran's portfolio showcasing web development projects and skills.">
+    <meta property="og:title" content="Thrishala Baskaran | Portfolio">
+    <meta property="og:description" content="Web developer transitioning from HR — projects spanning full-stack apps, AI integrations, and games.">
+    <meta property="og:image" content="./img/profile-pic.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <title>Thrishala Baskaran | Portfolio</title>
     <script src="https://kit.fontawesome.com/750654fd52.js" crossorigin="anonymous"></script>
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
 </head>
 <body>
     <main>
         <div class="whole-page light">
+            <a href="#home" class="skip-link">Skip to main content</a>
             <header>
                 <nav id="navbar">
                     <div class="container">
@@ -23,9 +30,9 @@
                             </ul>
                         </div>
                         <div class="overlay"></div>
-                        <div class="hamburger-menu">
+                        <button class="hamburger-menu" aria-label="Open Menu" aria-expanded="false" type="button">
                             <div class="bar"></div>
-                        </div>
+                        </button>
                     </div>
                 </nav>
             </header>
@@ -40,12 +47,12 @@
                         <p class="content">Welcome to my portfolio of learnings and projects.  </p>
 
                         <div class="resume">
-                            <button class="btn" onclick="window.open('./img/TB_Resume.docx.pdf')"> Download CV </button>
+                            <a href="./img/_TB-RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
                         </div>
 
                         <div id="socials">
-                            <img src="./img/linked-in-img.png" alt="linkedin profile" class="icon" onclick="location.href ='https://www.linkedin.com/in/thrishala-baskaran/'">
-                            <img src="./img/github-icon.svg" alt="GitHub profile" class="icon" onclick="location.href ='https://github.com/TB0515'">
+                            <a href ='https://www.linkedin.com/in/thrishala-baskaran/' target="_blank" rel="noopener noreferrer"><img src="./img/linked-in-img.png" alt="linkedin profile" class="icon"></a>
+                            <a href ='https://github.com/TB0515' target="_blank" rel="noopener noreferrer"><img src="./img/github-icon.svg" alt="GitHub profile" class="icon"></a>
                         </div>
                     </div>
                     <div class="home-right">
@@ -55,11 +62,11 @@
             </section>
 
             <section id="about">
-                <h1 class="about-title">About Me</h1>
+                <h2 class="about-title">About Me</h2>
                 <div class="container">
                     
-                    <div class="profile-pic">
-                        <img src="./img/profile-pic.png" alt="profile-pic" class="my-pic">
+                    <div class="my-pic">
+                        <img src="./img/profile-pic.png" alt="photo of Thrishala Baskaran" loading="lazy">
                     </div>
                     <div class="brief">
                         <p class="content">While working in Human Resources, I was drawn to coding as a way to solve the pain points of repetitive tasks. 
@@ -70,16 +77,16 @@
                     </div>
                     
                 </div>
-                <article>
-                    <i class="fa-solid fa-angles-down arrow icon" onclick="location.href='./#my-learning'"></i>
-                </article>
+                <div class="nav-arrow">
+                    <a href="#my-learning" aria-label="Go to My Learning Section"><i class="fa-solid fa-angles-down arrow icon" aria-hidden="true"></i></a>
+                </div>
             </section>
 
             <section id="my-learning">
                 <div class="container">
                     <div class="box1">
                         <div class="main-title">
-                            <h1>My Learning Journey so Far</h1>
+                            <h2>My Learning Journey so Far</h2>
                         </div>
                         <p class="content">
                             Building this website from the ground up offered a rich, hands-on experience with the fundamental building blocks of the modern web. 
@@ -131,7 +138,7 @@
                     <div class="box">
                         <div class="item1">
                             <p class="content">
-                                Teaching myself Python through Udemy reenforced by passion for development. 
+                                Teaching myself Python through Udemy reinforced my passion for development. 
                                 Its clear and straightforward syntax made learning programming enjoyable and approachable, even without any prior experience. 
                                 From automating simple tasks to exploring basic web tools, Python has shown me how coding can tackle real-world challenges and motivated me to keep discovering what’s possible behind the scenes.
                                 I am currently in the phase of learning about Flask framework. I have linked a github repo with my source code for pingpong game, still in the process of learning how to host it on web or make an app.
@@ -142,51 +149,97 @@
                         </div>
                     </div>
                 </div>
-                <article>
-                    <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#project-section'"></i>
-                </article>
+                <div class="nav-arrow">
+                    <a href="#project-section" aria-label="Go to Project Section"><i class="fa-solid fa-angles-down arrow" aria-hidden="true"></i></a>
+                </div>
             </section>
             
             <section id="project-section">
-                <h1 class="about-title">My Projects</h1>
+                <h2 class="about-title">My Projects</h2>
                 <div class="container">
                     <div class="details-container">
                         <div class="article">
-                            <img src="./img/turtle.png" alt="green-turle game cover" class='project-img'>
+                            <img src="./img/turtle.png" alt="Turtle Crossing game screenshot" class='project-img' loading="lazy">
                             <h2 class="sub-heading">Turtle Crossing Game</h2>
+                            <p class="project-desc">A Frogger-style game where a turtle dodges traffic to reach the other side.</p>
+                            <ul class="tags" aria-label="Tech stack">
+                                <li>JavaScript</li>
+                                <li>Turtle Graphics</li>
+                            </ul>
                             <div class="resume">
-                                <button class="btn" onclick="location.href ='https://github.com/TB0515/Turtle-Crossing-Game'">GitHub</button>
-                                <button class="btn" onclick="location.href ='https://tb0515.github.io/Turtle-Crossing-Game/'">Live Demo</button>
+                                <a href="https://github.com/TB0515/Turtle-Crossing-Game" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                                <a href="https://tb0515.github.io/Turtle-Crossing-Game/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                             </div>
                         </div>
                     </div>
                     <div class="details-container">
                         <div class="article">
-                            <img src="./img/poker.jpg" alt="poker" class='project-img'>
+                            <img src="./img/poker.jpg" alt="Black Jack card game screenshot" class='project-img' loading="lazy">
                             <h2 class="sub-heading">Black Jack</h2>
+                            <p class="project-desc">A browser-based Blackjack card game with hit, stand, and score tracking.</p>
+                            <ul class="tags" aria-label="Tech stack">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
                             <div class="resume">
-                                <button class="btn" onclick="location.href ='https://github.com/TB0515/Black-Jack-Game'">GitHub</button>
-                                <button class="btn" onclick="location.href ='https://tb0515.github.io/Black-Jack-Game/'">Live Demo</button>
+                                <a href="https://github.com/TB0515/Black-Jack-Game" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                                <a href="https://tb0515.github.io/Black-Jack-Game/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="article">
+                            <img src="./img/color-palette.png" alt="Color Palette Extractor app screenshot" class='project-img' loading="lazy">
+                            <h2 class="sub-heading">Color Palette Extractor</h2>
+                            <p class="project-desc">Browse movie posters and extract AI-generated colour palettes that retheme the entire UI in real time.</p>
+                            <ul class="tags" aria-label="Tech stack">
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>OpenAI</li>
+                                <li>TMDB API</li>
+                            </ul>
+                            <div class="resume">
+                                <a href="https://github.com/TB0515/Color-Palette-Extractor" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                                <a href="https://color-palette-extractor-p2kn.onrender.com" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="article">
+                            <img src="./img/job-genie.png" alt="Job Genie app screenshot" class='project-img' loading="lazy">
+                            <h2 class="sub-heading">Job Genie</h2>
+                            <p class="project-desc">A full-stack job search tool that uses Claude AI to generate a personalised company wishlist and surfaces open roles.</p>
+                            <ul class="tags" aria-label="Tech stack">
+                                <li>React</li>
+                                <li>TypeScript</li>
+                                <li>Node.js</li>
+                                <li>Supabase</li>
+                                <li>Claude AI</li>
+                            </ul>
+                            <div class="resume">
+                                <a href="https://github.com/fac-32/Job-Genie-Frontend" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                                <a href="https://job-genie-frontend-i50i.onrender.com" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <article>
-                    <i class="fa-solid fa-angles-down arrow" onclick="location.href='./#contact'"></i>
-                </article>
+                <div class="nav-arrow">
+                    <a href="#contact" aria-label="Go to Contact Section"><i class="fa-solid fa-angles-down arrow" aria-hidden="true"></i></a>
+                </div>
             </section>
 
             <section id="contact">
-                <h1 class="about-title">Contact Me</h1>
+                <h2 class="about-title">Contact Me</h2>
                 <div class="container">
                     <div class="contact-info">
                         <div class="contact-info-detail">
-                            <i class="fa-solid fa-envelope mail icon"></i>
-                            <p class="content"><a href="mailto:someone@example.com">thrishbg15@gmail.com</a></p> 
+                            <i class="fa-solid fa-envelope mail icon" aria-hidden="true"></i>
+                            <p class="content"><a href="mailto:thrishbg15@gmail.com">thrishbg15@gmail.com</a></p> 
                         </div>
                         <div class="contact-info-detail">
-                            <img src="./img/linked-in-img.png" alt="Linkedin icon" class="icon">
-                            <p class="contact"><a href='https://www.linkedin.com/in/thrishala-baskaran/'>LinkedIn</a></p> 
+                            <a href="https://www.linkedin.com/in/thrishala-baskaran/" target="_blank" rel="noopener noreferrer"><img src="./img/linked-in-img.png" alt="Linkedin icon" class="icon"></a>
+                            <p class="contact"><a href='https://www.linkedin.com/in/thrishala-baskaran/' target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
                         </div>
                     </div>
                 </div>
@@ -194,15 +247,15 @@
 
             <footer>
                 <div class="container">
-                    <button class="toggle-button">
-                        <i class="fa-solid fa-moon"></i>
-                        <i class="fa-regular fa-sun"></i>
+                    <button class="toggle-button" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                        <i class="fa-regular fa-sun" aria-hidden="true"></i>
                     </button>
-                    <article>
-                        <i class="fa-solid fa-angles-up arrow" onclick="location.href='./#navbar'"></i>
-                    </article>
+                    <div class="nav-arrow">
+                        <a href='#navbar' aria-label="Go to Navbar"><i class="fa-solid fa-angles-up arrow" aria-hidden="true"></i></a>
+                    </div>
                 </div>
-                <p class="content">Copyright &#169; 2025 TB. All Rights Reserved.</p>
+                <p class="content">Copyright &#169; 2026 TB. All Rights Reserved.</p>
             </footer>
         </div>
     </main>
