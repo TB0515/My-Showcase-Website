@@ -63,14 +63,14 @@ a.skip-link:focus-visible {
 
 .whole-page {
     position: relative;
-    padding: 2rem 0 2rem;
+    padding: 0 0 2rem;
     width: 100%;
     min-height: 100vh;
     background-image: var(--backgroundImage);
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    -webkit-justify-content: center;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -81,8 +81,14 @@ section{
     padding-top: 4vh;
     height: auto;
     min-height: 96vh;
-    place-content: center;
-    place-items: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    scroll-margin-top: 4rem;
 }
 
 
@@ -95,8 +101,11 @@ section{
 }
 
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 70;
+    background: var(--mainColor);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header .container{
@@ -106,6 +115,7 @@ header .container{
     align-items: center;
     -webkit-justify-content: space-evenly;
     justify-content: space-evenly;
+    padding: 0.75rem 1rem;
 }
 
 .overlay {
@@ -244,9 +254,15 @@ a {
 }
 
 .resume {
-    display: grid;
-    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
     align-items: center;
+    gap: 10px;
 }
 
 .btn {
@@ -265,17 +281,6 @@ a {
 
 .btn:hover{
     background-color: var(--hoverColor);
-}
-
-#socials{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    padding: 1rem 1.5rem;
-    margin: 1rem 1rem;
 }
 
 .icon {
@@ -298,6 +303,7 @@ a {
     justify-content: space-evenly;
     -webkit-align-items: center;
     align-items: center;
+    gap: 2rem;
     margin: 20px auto;
 }
 
@@ -325,22 +331,17 @@ a {
 .brief{
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    border: 2px solid var(--darkOne);
-    padding: 3rem;
-    border-radius: 9rem 5rem 12rem 7rem;
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
+    gap: 1.2rem;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
-.brief p{
-    -webkit-transform: rotate(-3deg);   
-    transform: rotate(-3deg);
+.brief .content {
+    max-width: 100%;
+    margin: 0;
 }
 
 #about .arrow {
@@ -355,50 +356,6 @@ a {
 .nav-arrow i {
     cursor: pointer;
 }
-
-#my-learning .container{
-    display: grid;
-    position:relative;
-    box-sizing: border-box;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    min-height: fit-content;
-}
-
-.box1 {
-    grid-column-end: span 4;
-    place-content: center;
-    place-items: center;
-}
-
-.box1 .content{
-    max-width: 95%;
-}
-
-.box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.box .item1{
-    align-self: flex-start;
-}
-
-.box .resume{
-    align-self: flex-end;
-}
-
-#my-learning .arrow {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    font-size: 2rem;
-    color: var(--darkTwo);
-}
-
 
 #project-section .container{
     position: relative;
@@ -422,7 +379,7 @@ a {
     border-radius: 2rem;
 }
 
-.article {
+.project-card {
     display: -webkit-flex;
     display:flex;
     flex-direction: column;
@@ -504,20 +461,19 @@ a {
     flex-direction: column;
     min-height: 70vh;
     padding: 5rem 0;
-    margin: 5rem 0;
 }
 
 
 #contact .container{
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
 }
 
 .contact-info{
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
     border-radius: 2rem;
     background: var(--mainColor);
     margin: 2rem auto;
@@ -543,13 +499,22 @@ a {
     cursor: pointer;
 }
 
+.contact-info-detail a {
+    min-height: 2.75rem;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 footer .container{
     position:relative;
     margin-top: 4rem;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 footer .arrow {
@@ -570,8 +535,8 @@ footer .content{
 .toggle-button {
     display: -webkit-flex;
     display: flex;
-    border: none;
-    background: var(--mainColor);
+    border: 1px solid var(--darkOne);
+    background: transparent;
     color: var(--darkTwo);
     cursor: pointer;
     height: 2.5rem;
@@ -581,7 +546,7 @@ footer .content{
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .toggle-button:not(:focus-visible) {
@@ -628,31 +593,7 @@ footer .content{
 }
 
 @media only screen and (max-width: 1300px) {
-    #my-learning .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .box1 {
-        grid-column: span 2;
-    }
-
-    .box {
-        grid-template-columns: 1fr;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .item1 .content{
-        max-width: fit-content;
-        margin: 0 20px;
-    }
-
     #about .arrow{
-        display: none;
-    }
-    #my-learning .arrow{
         display: none;
     }
 
@@ -661,7 +602,7 @@ footer .content{
     }
 
     #contact .container{
-    width: fit-content;
+        flex-wrap: wrap;
     }
 
     .contact-info{
@@ -695,24 +636,6 @@ footer .content{
         max-height: 300px;
     }
 
-    .brief {
-        border: none;
-        -webkit-transform: rotate(0deg);   
-        transform: rotate(0deg);
-    }
-
-    .brief p{
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    #my-learning .container {
-        grid-template-columns: 1fr;
-    }
-
-    .box1 {
-        grid-column: span 1;
-    }
 
     header .container{
         -webkit-justify-content: flex-end;
@@ -783,8 +706,27 @@ footer .content{
         border-radius: 1rem;
     }
 
-    .article {
+    .project-card {
         width: 180px;
+    }
+
+    header {
+        position: relative;
+        background: none;
+        box-shadow: none;
+    }
+
+    section {
+        scroll-margin-top: 0;
+    }
+
+    .toggle-button {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        border-radius: 0 0 50% 0;
+        margin-left: 0;
     }
 
 }

@@ -36,10 +36,12 @@ window.addEventListener('load', function() {
     }
 
     function toggleAnimation() {
+        toggleBtn.disabled = true; // prevent race condition from rapid clicks
         const scrollPos = window.scrollY;
         document.body.classList.add("stop-scrolling");
         dark = !dark;
-        let clone = wholePage.cloneNode(true);   
+        let clone = wholePage.cloneNode(true);
+        clone.querySelector(".toggle-button").disabled = false; // ensure clone button is enabled
         if (dark) {
             clone.classList.remove("light");
             clone.classList.add("dark");
@@ -60,6 +62,7 @@ window.addEventListener('load', function() {
             clone.classList.remove("copy");
             declare();
             toggleEvents();
+            toggleBtn.focus(); // restore focus after DOM swap
             window.scrollTo(0, scrollPos);
         });
     }
@@ -68,6 +71,28 @@ window.addEventListener('load', function() {
         if (e.key === "Escape" && wholePage.classList.contains("active")) {
             wholePage.classList.remove("active");
             hamburgerMenu.setAttribute("aria-expanded", "false");
+            hamburgerMenu.focus();
+        }
+
+        // Focus trap: keep Tab inside mobile menu when open
+        if (wholePage.classList.contains("active")) {
+            const focusable = Array.from(
+                document.querySelector('.links').querySelectorAll('a[href], button:not([disabled])')
+            );
+            if (!focusable.length || e.key !== 'Tab') return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey) {
+                if (document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else {
+                if (document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
         }
     });
 
@@ -79,11 +104,19 @@ window.addEventListener('load', function() {
             wholePage.classList.toggle("active");
             const isOpen = wholePage.classList.contains("active");
             hamburgerMenu.setAttribute("aria-expanded", isOpen);
+            if (isOpen) {
+                // Move focus to first nav link when menu opens
+                const firstLink = document.querySelector('.links a');
+                if (firstLink) firstLink.focus();
+            } else {
+                hamburgerMenu.focus();
+            }
         });
         const overlay = document.querySelector(".overlay");
         overlay.addEventListener("click", () => {
             wholePage.classList.remove("active");
             hamburgerMenu.setAttribute("aria-expanded", "false");
+            hamburgerMenu.focus();
         });
 
         document.querySelectorAll(".links a").forEach(link => {

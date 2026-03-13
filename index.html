@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Thrishala Baskaran's portfolio showcasing web development projects and skills.">
     <meta property="og:title" content="Thrishala Baskaran | Portfolio">
-    <meta property="og:description" content="Web developer transitioning from HR — projects spanning full-stack apps, AI integrations, and games.">
-    <meta property="og:image" content="./img/profile-pic.png">
+    <meta property="og:description" content="Full-stack developer with a background in HR and Analytics — building AI-powered tools, NHS platforms, and more.">
+    <meta property="og:image" content="https://tb0515.github.io/My-Showcase-Website/img/profile-pic.png">
+    <meta property="og:url" content="https://tb0515.github.io/My-Showcase-Website/">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <title>Thrishala Baskaran | Portfolio</title>
-    <script src="https://kit.fontawesome.com/750654fd52.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/750654fd52.js" crossorigin="anonymous" defer></script>
     <script src="./app.js" defer></script>
 </head>
 <body>
@@ -21,10 +22,13 @@
             <header>
                 <nav id="navbar">
                     <div class="container">
+                        <button class="toggle-button" aria-label="Toggle Dark Mode" type="button">
+                            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                            <i class="fa-regular fa-sun" aria-hidden="true"></i>
+                        </button>
                         <div class="links">
                             <ul>
                                 <li><a href="#about">About</a></li>
-                                <li><a href="#my-learning">My Learnings</a></li>
                                 <li><a href="#project-section">Projects</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
@@ -37,26 +41,21 @@
                 </nav>
             </header>
 
-            <section id="home">
+            <section id="home" tabindex="-1">
                 <div class="container">
                     <div class="home-left">
                         <div class="main-title">
                             <h1>Hello,</h1>
                         </div>
-                        <p class="content"> I'm Thrishala Baskaran - a curious learner blending my HR background with new web development skills.</p>
-                        <p class="content">Welcome to my portfolio of learnings and projects.  </p>
+                        <p class="content">I'm Thrishala Baskaran — Full-stack developer with a background in HR and Analytics. I build things that solve real problems — from AI-powered job tools to NHS patient management platforms.</p>
 
                         <div class="resume">
-                            <a href="./img/_TB-RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
-                        </div>
-
-                        <div id="socials">
-                            <a href ='https://www.linkedin.com/in/thrishala-baskaran/' target="_blank" rel="noopener noreferrer"><img src="./img/linked-in-img.png" alt="linkedin profile" class="icon"></a>
-                            <a href ='https://github.com/TB0515' target="_blank" rel="noopener noreferrer"><img src="./img/github-icon.svg" alt="GitHub profile" class="icon"></a>
+                            <a href="#project-section" class="btn">View Projects</a>
+                            <a href="./img/TB-RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
                         </div>
                     </div>
                     <div class="home-right">
-                        <img src="./img/My favorite activities.png" alt="illustration of code, hiking, running, sudoku, chess, lego, puzzle, and chocolates around a heart." class="loved-things">
+                        <img src="./img/My%20favorite%20activities.png" alt="illustration of code, hiking, running, sudoku, chess, lego, puzzle, and chocolates around a heart." class="loved-things">
                     </div>
                 </div>
             </section>
@@ -69,85 +68,10 @@
                         <img src="./img/profile-pic.png" alt="photo of Thrishala Baskaran" loading="lazy">
                     </div>
                     <div class="brief">
-                        <p class="content">While working in Human Resources, I was drawn to coding as a way to solve the pain points of repetitive tasks. 
-                            This curiosity sparked a desire to learn and create efficient solutions with technology. 
-                            After taking a career break, I’ve embraced each day as an opportunity to build new skills from scratch. 
-                            When my husband’s colleague shared her inspiring journey with Founders and Coders, I knew this hands-on, collaborative bootcamp was the perfect place to grow. 
-                            I’m excited to join a passionate community where I can learn, connect, and confidently launch my new career as a developer.</p>
+                        <p class="content">I'm a software developer with a background in HR and Analytics. My move into tech wasn't accidental — working in HR exposed me to the friction of manual, repetitive processes, and I became convinced that code was the most powerful tool to fix them. I completed the Founders and Coders bootcamp, where I built full-stack applications using React, TypeScript, Node.js, and AI APIs.</p>
+                        <p class="content">Most recently, I competed in the HuddleHive Women in Tech Hackathon, where my team built QCare — an NHS waiting list management platform that gives patients real-time queue visibility and automates escalations to reduce Did Not Attend rates. I bring technical ability, business acumen, and a genuine drive to build things that work for real people.</p>
                     </div>
                     
-                </div>
-                <div class="nav-arrow">
-                    <a href="#my-learning" aria-label="Go to My Learning Section"><i class="fa-solid fa-angles-down arrow icon" aria-hidden="true"></i></a>
-                </div>
-            </section>
-
-            <section id="my-learning">
-                <div class="container">
-                    <div class="box1">
-                        <div class="main-title">
-                            <h2>My Learning Journey so Far</h2>
-                        </div>
-                        <p class="content">
-                            Building this website from the ground up offered a rich, hands-on experience with the fundamental building blocks of the modern web. 
-                            Each section and feature, from layout to animations, was coded purely in HTML, CSS, and vanilla JavaScript, bringing together everything I’ve learned so far. 
-                            Recently, I began self-learning Power BI through DataCamp and Python via Udemy. This is my first time undertaking a full web and game development project using HTML, CSS, and JavaScript. 
-                            Learning the basics of HTML, CSS, and JavaScript on freeCodeCamp, as advised before starting the projects, was very helpful.
-                        </p>
-                    </div>
-                    
-                    <div class="box">
-                        <div class="item1">
-                            <p class="content">
-                                Discovering HTML opened the door to a new world of creativity for me. 
-                                Building my first web page felt like magic—suddenly, I could turn simple text files into living, breathing experiences online! Linked below my first webpage. 
-                                With every heading, link, and form I crafted, I realized how powerful good structure and accessible design can be, allowing ideas to reach and impact anyone, anywhere.
-                            </p>
-                        </div>
-                        <div class="resume">
-                            <a href="https://tb0515.github.io/Recipe-Page-Basic-HTML/" class="btn">HTML</a>
-                        </div>
-                    </div>
-                    
-                    <div class="box">
-                        <div class="item1">
-                            <p class="content">
-                                With CSS, I learned to add soul and personality to my websites. 
-                                From bold color palettes and smooth animations to refined layouts that adapt to every device, CSS made it possible for me to design experiences that don’t just work—they spark curiosity and delight. 
-                                It’s more than decoration; it’s how a site feels and welcomes every visitor in their own way. Linked below is an event flyer I created while learning CSS Flexbox and Responsive design.
-                            </p>
-                        </div>
-                        <div class="resume">
-                            <a href="https://tb0515.github.io/Event-Flyer/" class="btn">CSS</a>
-                        </div>
-                    </div>
-                    
-                    <div class="box">
-                        <div class="item1">
-                            <p class="content">
-                                I recently began learning JavaScript after starting my coding journey with Python. 
-                                It was fascinating to see both the similarities and differences between the two languages, each with its own strengths. 
-                                JavaScript opened new doors for me, showing how it could be a game-changer in creating interactive web experiences and building impactful products that truly engage users.
-                            </p>
-                        </div>
-                        <div class="resume">
-                            <a href="https://www.codewars.com/users/TB0515" class="btn">JavaScript</a>
-                        </div>
-                    </div>
-                    
-                    <div class="box">
-                        <div class="item1">
-                            <p class="content">
-                                Teaching myself Python through Udemy reinforced my passion for development. 
-                                Its clear and straightforward syntax made learning programming enjoyable and approachable, even without any prior experience. 
-                                From automating simple tasks to exploring basic web tools, Python has shown me how coding can tackle real-world challenges and motivated me to keep discovering what’s possible behind the scenes.
-                                I am currently in the phase of learning about Flask framework. I have linked a github repo with my source code for pingpong game, still in the process of learning how to host it on web or make an app.
-                            </p>
-                        </div>
-                        <div class="resume">
-                            <a href="https://github.com/TB0515/Pingpong-Game" class="btn">Python</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="nav-arrow">
                     <a href="#project-section" aria-label="Go to Project Section"><i class="fa-solid fa-angles-down arrow" aria-hidden="true"></i></a>
@@ -158,41 +82,28 @@
                 <h2 class="about-title">My Projects</h2>
                 <div class="container">
                     <div class="details-container">
-                        <div class="article">
-                            <img src="./img/turtle.png" alt="Turtle Crossing game screenshot" class='project-img' loading="lazy">
-                            <h3 class="sub-heading">Turtle Crossing Game</h3>
-                            <p class="project-desc">A Frogger-style game where a turtle dodges traffic to reach the other side.</p>
-                            <ul class="tags" aria-label="Tech stack">
-                                <li>JavaScript</li>
-                                <li>Turtle Graphics</li>
-                            </ul>
-                            <div class="resume">
-                                <a href="https://github.com/TB0515/Turtle-Crossing-Game" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-                                <a href="https://tb0515.github.io/Turtle-Crossing-Game/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details-container">
-                        <div class="article">
-                            <img src="./img/poker.jpg" alt="Black Jack card game screenshot" class='project-img' loading="lazy">
-                            <h3 class="sub-heading">Black Jack</h3>
-                            <p class="project-desc">A browser-based Blackjack card game with hit, stand, and score tracking.</p>
+                        <div class="project-card">
+                            <!-- <img src="./img/poker.jpg" alt="Black Jack card game screenshot" class='project-img' loading="lazy"> -->
+                            <h3 class="sub-heading">QCare</h3>
+                            <p class="project-desc">An NHS waiting list management platform built in 48 hours at the HuddleHive Hackathon. Patients see their real-time
+                            queue position; the system automates SMS and voice escalations to cut Did Not Attend rates.</p>
                             <ul class="tags" aria-label="Tech stack">
                                 <li>HTML</li>
                                 <li>CSS</li>
                                 <li>JavaScript</li>
                             </ul>
                             <div class="resume">
-                                <a href="https://github.com/TB0515/Black-Jack-Game" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-                                <a href="https://tb0515.github.io/Black-Jack-Game/" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
+                                <a href="https://github.com/TB0515/QCare" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+                                <a href="https://codecrafters-824ec.web.app/clinic/login" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
                             </div>
                         </div>
                     </div>
                     <div class="details-container">
-                        <div class="article">
-                            <img src="./img/color-palette.png" alt="Color Palette Extractor app screenshot" class='project-img' loading="lazy">
+                        <div class="project-card">
+                            <!-- <img src="./img/color-palette.png" alt="Color Palette Extractor app screenshot" class='project-img' loading="lazy"> -->
                             <h3 class="sub-heading">Color Palette Extractor</h3>
-                            <p class="project-desc">Browse movie posters and extract AI-generated colour palettes that retheme the entire UI in real time.</p>
+                            <p class="project-desc">Browse movie posters and extract AI-generated colour palettes that retheme the entire UI in real time. A full-stack
+                            experiment combining third-party APIs with generative AI output.</p>
                             <ul class="tags" aria-label="Tech stack">
                                 <li>Node.js</li>
                                 <li>Express</li>
@@ -206,10 +117,11 @@
                         </div>
                     </div>
                     <div class="details-container">
-                        <div class="article">
-                            <img src="./img/job-genie.png" alt="Job Genie app screenshot" class='project-img' loading="lazy">
+                        <div class="project-card">
+                            <!-- <img src="./img/job-genie.png" alt="Job Genie app screenshot" class='project-img' loading="lazy"> -->
                             <h3 class="sub-heading">Job Genie</h3>
-                            <p class="project-desc">A full-stack job search tool that uses Claude AI to generate a personalised company wishlist and surfaces open roles.</p>
+                            <p class="project-desc">A full-stack job search tool that uses Claude AI to generate a personalised company wishlist and surfaces open roles.
+                            Built during the Founders and Coders bootcamp as a collaborative team project.</p>
                             <ul class="tags" aria-label="Tech stack">
                                 <li>React</li>
                                 <li>TypeScript</li>
@@ -220,6 +132,22 @@
                             <div class="resume">
                                 <a href="https://github.com/fac-32/Job-Genie-Frontend" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
                                 <a href="https://job-genie-frontend-i50i.onrender.com" target="_blank" rel="noopener noreferrer" class="btn">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="project-card">
+                            <!-- <img src="./img/turtle.png" alt="Turtle Crossing game screenshot" class='project-img' loading="lazy"> -->
+                            <h3 class="sub-heading">Turtle Crossing Game</h3>
+                            <p class="project-desc">A Frogger-style game where a turtle dodges traffic to reach the other side.</p>
+                            <ul class="tags" aria-label="Tech stack">
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="resume">
+                                <a href="https://github.com/TB0515/Turtle-Crossing-Game" target="_blank" rel="noopener noreferrer"
+                                    class="btn">GitHub</a>
+                                <a href="https://tb0515.github.io/Turtle-Crossing-Game/" target="_blank" rel="noopener noreferrer"
+                                    class="btn">Live Demo</a>
                             </div>
                         </div>
                     </div>
@@ -235,27 +163,32 @@
                     <div class="contact-info">
                         <div class="contact-info-detail">
                             <i class="fa-solid fa-envelope mail icon" aria-hidden="true"></i>
-                            <p class="content"><a href="mailto:thrishbg15@gmail.com">thrishbg15@gmail.com</a></p>
+                            <p><a href="mailto:thrishbg15@gmail.com">thrishbg15@gmail.com</a></p>
                         </div>
                         <div class="contact-info-detail">
-                            <a href="https://www.linkedin.com/in/thrishala-baskaran/" target="_blank" rel="noopener noreferrer"><img src="./img/linked-in-img.png" alt="Linkedin icon" class="icon"></a>
-                            <p class="contact"><a href='https://www.linkedin.com/in/thrishala-baskaran/' target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+                            <a href="https://www.linkedin.com/in/thrishala-baskaran/" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/linked-in-img.png" alt="LinkedIn profile" class="icon">
+                                <span>LinkedIn</span>
+                            </a>
                         </div>
+                        <div class="contact-info-detail">
+                            <a href='https://github.com/TB0515' target="_blank" rel="noopener noreferrer">
+                                <img src="./img/github-icon.svg" alt="GitHub profile" class="icon">
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </section>
 
             <footer>
                 <div class="container">
-                    <button class="toggle-button" aria-label="Toggle Dark Mode">
-                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
-                        <i class="fa-regular fa-sun" aria-hidden="true"></i>
-                    </button>
                     <div class="nav-arrow">
                         <a href='#navbar' aria-label="Go to Navbar"><i class="fa-solid fa-angles-up arrow" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <p class="content">Copyright &#169; 2026 TB. All Rights Reserved.</p>
+                <p class="content">Copyright &#169; 2025 TB. All Rights Reserved.</p>
             </footer>
         </div>
     </main>
